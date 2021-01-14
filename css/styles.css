@@ -1,0 +1,56 @@
+html {
+    background: #0a95ff;
+}
+
+body {
+    background: #ffffff;
+    margin: 1rem auto;
+    width: 80vw;
+    border-radius: 21px;
+    box-shadow: 15px 15px 15px 5px #1e0aff69;
+}
+
+header, footer {
+    background-image: linear-gradient(to bottom right,#ff5964 35%, #ffe74c);
+    color: #ffffff;    
+}
+
+header, nav, footer {
+    padding: 1rem 3rem;
+}
+
+main {
+    padding: 1rem 6rem;
+}
+
+nav ol{
+    list-style-type: none;
+    counter-reset: elementcounter;
+}
+
+nav li:before {
+    content: "Week " counter(elementcounter) ": ";
+    counter-increment: elementcounter;
+    font-weight: bold;
+}
+
+nav li:not(:last-child) {
+    margin-bottom: 0.5rem;
+}
+
+nav a, nav a:visited {
+    color: #1f0aff;
+}
+
+header {
+    border-radius: 20px 20px 0 0;
+}
+
+footer {
+    border-radius: 0 0 20px 20px;
+    text-align: center;
+}
+
+footer a, footer:visited {
+    color: #ffffff;
+}
