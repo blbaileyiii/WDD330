@@ -1,6 +1,7 @@
 const links = [
     {label: "Notes", url: "week01/index.html"},
-    {label: "Notes", url: "week02/index.html"}
+    {label: "Notes", url: "week02/index.html"},
+    {label: "Notes", url: "week03/index.html"}
 ];
 
 let olLinks = document.querySelector('.links');
