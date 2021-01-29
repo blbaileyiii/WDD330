@@ -21,19 +21,82 @@
         <section>
             <h4>Notes:</h4>
             <ol>
-                <li>Topic</li>
+                <li>Javascript: Novice to Ninja - Chapter 8: Forms
                     <ol>
-                        <li>Insight</li>
+                        <li>Four ways to access the Form in javascript:
+                            <ol>
+                                <li>CURR*: const form = document.forms.name;</li>
+                                <li>LEGACY: const form = document.forms[0];</li>
+                                <li>const form = document.getElementsByTagname('form')[0];</li>
+                                <li>
+                                    CURR ALT: const form = document.forms['name'];
+                                    <br>* Use this form potentially to avoid => WARNING: If the form had the same name as any properties or methods of the document.forms object, such as 'submit', for example, that property or method would be referenced instead of the &lt;form&gt; element.
+                                </li>
+                            </ol>
+                        </li>
+                        <li>we can use JavaScript to intercept the form before it’s sent by adding a submit event listener.</li>
+                        <li>Once intercepted we can even stop it from continuing to submit: preventDefault()</li>
+                        <li>Remember to use autofocus to the input we want ready to type in when we load a page as needed.</li>
                     </ol>
+                </li>
+                <li>Javascript: Novice to Ninja - Chapter 12: Object Oriented Programming in JS
+                    <ol>
+                        <li>(E5) Constructor Function:
+<pre>const Dice = function(sides=6){
+    this.sides = sides;
+    this.roll = function() {
+        return Math.floor(this.sides * Math.random() + 1)
+    }
+}</pre>
+                        </li>
+                        <li>const redDice = new Dice; vs. const redDice = new Dice(); :: No parenthesis if constructor functions exists.</li>
+                        <li>(E6) Class declaration instead of "(E5) Constructor Function":
+<pre>class Dice {
+    constructor(sides=6) {
+        this.sides = sides;
+    }
+    roll() {
+        return Math.floor(this.sides * Math.random() + 1)
+    }
+}</pre>                            
+                        </li>
+                        <li>Not sure why I would want this but you can use an object with the .constructor(var) syntax to create another instand of an object...: Example: const greenDice = new redDice.constructor(10);  </li>
+                        <li>The book is a little confusing but prototype is sort of like static... all objects created from the class will have the same prototype and value. Changing it for one changes it for all (see below). Then there are the usual class properties/methods that are extended to the instances/objects but those are unique to each obj/instance.</li>
+                        <li>The whole prototype system is a little finiky. You can't really change them easily, constructors mess everything up. And it seems that when they can be changed it doesn't change them for ALL but rather for subsequent.</li>
+                        <li>Property Attributes: value, writable, enumerable, configurable</li>
+                        <li>Enumerable: this boolean value shows whether a property will show up when the object is displayed in a for in loop, and is false by default</li>
+                        <li>"Nesting" this: that = this:
+<pre>superman.findFriends = function(){
+    const that = this;
+    this.friends.forEach(function(friend) {
+        console.log(`${friend.name} is friends with ${that.name}`);
+    }
+    );
+}</pre>                            
+                        </li>
+                        <li>Alt "Nesting" this: bind(this)
+<pre>superman.findFriends = function() {
+    this.friends.forEach(function(friend) {
+        console.log(`${friend.name} is friends with ${this.name}`);
+    }.bind(this);)
+}</pre>                            
+                        </li>
+                        <li>Probably best method: use arrow functions...</li>
+                    </ol>           
                 </li>
             </ol>
         </section>
         <section>
             <h4>Questions:</h4>
             <ol>
-                <li>Topic</li>
+                <li>Javascript: Novice to Ninja - Chapter 8: Forms
                     <ol>
-                        <li>Question</li>
+                        <li>Is this the prefered method for form retrieval? const form = document.forms.search;</li>
+                    </ol>
+                </li>
+                <li>Javascript: Novice to Ninja - Chapter 12: Object Oriented Programming in JS
+                    <ol>
+                        <li>It mentioned if you didn't know the constructor used that you could use: const greenDice = new redDice.constructor(10); to find and use it again... Under what circumstance would the programmer not know the constructor being used? I.e. I can see how this would be useful if it wasn't known... But how would it not be known? And if it wasn't why would I want to use it? I mean sure I can accept the premise...but I'm looking for a real example of where the premise would be true and I would want to use the feature.</li>
                     </ol>
                 </li>
             </ol>
