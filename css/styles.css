@@ -7,7 +7,7 @@ body {
     margin: 1rem auto;
     width: 80vw;
     border-radius: 21px;
-    box-shadow: 15px 15px 15px 5px #1e0aff69;
+    box-shadow: 5px 5px 15px 5px #1e0aff69;
 }
 
 header, footer {
@@ -53,4 +53,17 @@ footer {
 
 footer a, footer:visited {
     color: #ffffff;
+}
+
+section > ol {
+    font-weight: bold;
+    margin: 0;
+}
+
+section > ol > li > ol {
+    font-weight: normal;
+}
+
+h4 {
+    margin-bottom: 0.25rem;
 }

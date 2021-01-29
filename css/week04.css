@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');
+
+.tictactoe {
+  display: grid; 
+  gap: 1rem;
+  justify-content: center;
+  font-family: 'Carter One', Arial, Helvetica, sans-serif; 
+  border-radius: 21px;
+  box-shadow: 5px 5px 15px 1px #0a95ff;
+  padding: 1.5rem;
+  text-align: center;
+  margin: 0.5rem auto;
+  width: 21rem;
+}
+
+h5 {
+  font-size: 3rem;
+  margin: 0;  
+}
+
+.board {
+    display: grid;
+    grid-template-columns: 6rem 6rem 6rem;
+    grid-template-rows: 6rem 6rem 6rem;
+    justify-content: center;
+    font-size: 4rem;
+  }
+
+  .board > div {    
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+  }
+  .board > div:nth-child(3n) {
+    border-right: 0;
+  }
+  .board > div:nth-child(n + 7) {
+    border-bottom: 0;
+  }
+
+  .button {
+  }
+
+  button {
+    font-family: 'Carter One', Arial, Helvetica, sans-serif;
+    font-size: 1.25rem;
+    background:  #ff5964;
+    border: 4px outset #ff5964;
+    text-shadow: 2px 2px #00000067;
+    color: #ffffff;
+    outline: none;
+    padding: 0.25rem 1.5rem;
+    border-radius: 0.5rem;
+  }
+
+  button:active {
+    border: 4px inset #ff5964;
+  }
+
+  .winner {    
+    text-align: center;
+    font-size: 3rem;
+  }
+
+  .X {
+    color: #0a95ff;
+    text-shadow: 3px 3px #0a95ff55;
+  }
+
+  .O {
+    color: #ff5964;
+    text-shadow: 3px 3px #ff596455;
+  }
