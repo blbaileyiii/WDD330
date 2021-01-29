@@ -30,8 +30,8 @@ function addPiece(elem) {
     // console.log(elem.target);
     if( !elem.target.classList.contains('board') && winner == ""){
         if (!(elem.target.innerHTML == "X" || elem.target.innerHTML == "O")){
-            elem.target.innerHTML = player;
-            elem.target.classList.add(player);
+            elem.target.innerHTML = "<span class='" + player + " wiggles'>" + player + "</span>";
+            //elem.target.classList.add(player);
 
             for (let i = 0; i < board.children.length; i++){
                 if(board.children[i] === elem.target) {                
@@ -95,17 +95,17 @@ function winCheck(elem){
     for (xo = 0; xo < game.length; xo++){
         console.log(game[xo]);
         if(winComp(game[xo], player1win)){
-            winner = "<span class='" + player + "'>X Wins!</span>";
+            winner = "<span class='" + player + " wiggles'>X Wins!</span>";
         } else if (winComp(game[xo], player2win)){
             //o wins
-            winner = "<span class='" + player + "'>O Wins!</span>";
+            winner = "<span class='" + player + " wiggles'>O Wins!</span>";
         } else if (game[xo].includes("")) {
             tie = false;            
         }
     }
 
     if (tie && winner == "") {
-        winner = "<span class='X'>I</span><span class='O'>t</span><span class='X'>'</span><span class='O'>s</span> <span class='X'>a</span> <span class='O'>T</span><span class='X'>i</span><span class='O'>e</span><span class='X'>!</span>"
+        winner = "<span class='X wiggles'>I</span><span class='O wiggles'>t</span><span class='X wiggles'>'</span><span class='O wiggles'>s</span> <span class='X wiggles'>a</span> <span class='O wiggles'>T</span><span class='X wiggles'>i</span><span class='O wiggles'>e</span><span class='X wiggles'>!</span>"
         winnerDiv.classList.add("X", "O");
     }
 
