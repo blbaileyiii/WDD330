@@ -101,7 +101,6 @@ h4 {
     margin: .5rem 0;
     background: #53b4ff;
     color: #000;
-    text-decoration: none;
     -moz-border-radius: .3rem;
     -webkit-border-radius: .3rem;
     border-radius: 2rem;
@@ -110,9 +109,16 @@ h4 {
 
 .notes span:hover{
     background: #ffe74c;
-    text-decoration:none;
     transform: scale(1.1);
 }
+
+.notes a, .notes a:visited, .notes a:active{
+    color: white;
+}
+
+.notes span:hover a, .notes span:hover a:visited, .notes span:hover a:active {
+    color: black;
+} 
 
 .notes span:before{
     content: counter(li);
