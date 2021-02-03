@@ -108,8 +108,8 @@ h4 {
 }
 
 .notes span:hover{
-    background: #ffe74c;
-    transform: scale(1.1);
+    background-image: linear-gradient(to left,#1f0aff69, #53b4ff 55%);
+    transform: scale(1.05);
 }
 
 .notes a, .notes a:visited, .notes a:active{
