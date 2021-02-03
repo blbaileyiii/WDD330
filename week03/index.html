@@ -17,55 +17,55 @@
     </header>
     <main>
         <h3>Week 03</h3>
-        <section>
+        <section class="notes">
             <h4>Notes:</h4>
             <ol>
-                <li>Object Method: this
+                <span>Object Method: this</span>
                     <ol>
-                        <li>Arrow Function has no "this". When "this" is ref. it ref. to next higher level.</li>
+                        <span>Arrow Function has no "this". When "this" is ref. it ref. to next higher level.</span></li>
                     </ol>
                 </li>
-                <li>Javascript: Novice to Ninja - Chapter 5: Objects
+                <span>Javascript: Novice to Ninja - Chapter 5: Objects</span>
                     <ol>
-                        <li>If the name of the variable and the name of the property are the same, then you can use shortform obj creation:
-                            <br>const name = 'Iron Man';
-                            <br>const realName = 'Tony Stark';
-                            <br>// long way
-                            <br>const ironMan = { name: name, realName: realName };
-                            <br>// short ES6 way
-                            <br>const ironMan = { name, realName };
-                        </li>
-                        <li>You can use dot notation or [""]; [] is "superior" in that it can be used to pass variables, concat strings, etc, to form the prop.</li>
-                        <li>Loop over properties: for(const key in object)</li>
-                        <li>Object.keys(obj) returns array of keys and Object.values(obj) returns array of values.</li>
-                        <li>Namespacing: const namespaceVarName = {}; toss the functions into that and separate by comma. Call the same way you do an obj. Helps to scope variables and avoid collisions.</li>
+                        <span>If the name of the variable and the name of the property are the same, then you can use shortform obj creation:
+<pre>const name = 'Iron Man';
+const realName = 'Tony Stark';
+// long way
+const ironMan = { name: name, realName: realName };
+// short ES6 way
+const ironMan = { name, realName };</pre>
+                        </span></li>
+                        <span>You can use dot notation or [""]; [] is "superior" in that it can be used to pass variables, concat strings, etc, to form the prop.</span></li>
+                        <span>Loop over properties: for(const key in object)</span></li>
+                        <span>Object.keys(obj) returns array of keys and Object.values(obj) returns array of values.</span></li>
+                        <span>Namespacing: const namespaceVarName = {}; toss the functions into that and separate by comma. Call the same way you do an obj. Helps to scope variables and avoid collisions.</span></li>
                     </ol>
                 </li>
-                <li>Javascript: Novice to Ninja - Chapter 6: The Document Object Model
+                <span>Javascript: Novice to Ninja - Chapter 6: The Document Object Model</span>
                     <ol>
-                        <li>DOM isn't javascript: "document" is. The term "document" is used to access the DOM which doesn't care what language you are using.</li>
-                        <li>CSS property background-color becomes backgroundColor in the DOM. Dashes are not legal characters in property names.</li>
+                        <span>DOM isn't javascript: "document" is. The term "document" is used to access the DOM which doesn't care what language you are using.</span></li>
+                        <span>CSS property background-color becomes backgroundColor in the DOM. Dashes are not legal characters in property names.</span></li>
                     </ol>
                 </li>
-                <li>Javascript: Novice to Ninja - Chapter 7: Events
+                <span>Javascript: Novice to Ninja - Chapter 7: Events</span>
                     <ol>
-                        <li>document.body.addEventListener("click", doSomething);</li>
-                        <li>Using inline is not longer recommented: you want to keep javascript in javascript, css in css, and html in html. Other reasons exist. This is the one I like the best, though single vs. multiple event handlers seems to be another.</li>
+                        <span>document.body.addEventListener("click", doSomething);</span></li>
+                        <span>Using inline is not longer recommented: you want to keep javascript in javascript, css in css, and html in html. Other reasons exist. This is the one I like the best, though single vs. multiple event handlers seems to be another.</span></li>
                     </ol>
                 </li>
             </ol>
         </section>
-        <section>
+        <section class="notes">
             <h4>Questions:</h4>
             <ol>
-                <li>Javascript: Novice to Ninja - Chapter 5: Objects
+                <span>Javascript: Novice to Ninja - Chapter 5: Objects</span>
                     <ol>
-                        <li>How does const ironMan = { name, realName } know what to assign as the variable? I answered this myself. The text wasn't especially clear. But the variable and the property must have the same name for the assignment to work.</li>
+                        <span>How does const ironMan = { name, realName } know what to assign as the variable? I answered this myself. The text wasn't especially clear. But the variable and the property must have the same name for the assignment to work.</span></li>
                     </ol>
                 </li>
-                <li>Javascript: Novice to Ninja - Chapter 7: Events
+                <span>Javascript: Novice to Ninja - Chapter 7: Events</span>
                     <ol>
-                        <li>I thought you could put multiple event handlers inline? I thought you just had to declare them... Perhaps I didn't understand this: "Only one event handler for each event-type can be attached to an element." Or I am mistaken and you can't have an onmouseover with an onclick...no I'm sure I've done it in the past.</li>
+                        <span>I thought you could put multiple event handlers inline? I thought you just had to declare them... Perhaps I didn't understand this: "Only one event handler for each event-type can be attached to an element." Or I am mistaken and you can't have an onmouseover with an onclick...no I'm sure I've done it in the past.</span></li>
                     </ol>
                 </li>
             </ol>

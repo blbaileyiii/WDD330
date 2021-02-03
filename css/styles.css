@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
 html {
     background: #0a95ff;
+    font-family: 'Raleway', sans-serif;
 }
 
 body {
@@ -10,7 +13,7 @@ body {
     box-shadow: 5px 5px 15px 5px #1e0aff69;
 }
 
-header, footer {
+header, footer, h4 {
     background-image: linear-gradient(to bottom right,#ff5964 35%, #ffe74c);
     color: #ffffff;    
 }
@@ -64,6 +67,69 @@ section > ol > li > ol {
     font-weight: normal;
 }
 
+h3 {    
+    font-size: 2rem; 
+}
+
 h4 {
-    margin-bottom: 0.25rem;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    border-radius: 0.75rem;
+}
+
+.notes{
+    margin:0 auto;
+}
+
+.notes ol{
+    counter-reset: li;
+    list-style: none;
+    *list-style: decimal;
+    padding: 0;
+    margin: 0 1.5rem 4rem;
+}
+.notes ol ol{
+    margin: 0 0 0 2rem;
+}
+
+.notes span{
+    position: relative;
+    display: block;
+    padding: .4rem .4rem .4rem 2rem;
+    *padding: .4rem;
+    margin: .5rem 0;
+    background: #53b4ff;
+    color: #000;
+    text-decoration: none;
+    -moz-border-radius: .3rem;
+    -webkit-border-radius: .3rem;
+    border-radius: 2rem;
+    transition: all .2s ease-in-out;
+}
+
+.notes span:hover{
+    background: #ffe74c;
+    text-decoration:none;
+    transform: scale(1.1);
+}
+
+.notes span:before{
+    content: counter(li);
+    counter-increment: li;
+    position: absolute;
+    left: -1.3rem;
+    top: 50%;
+    margin-top: -1.3rem;
+    background:#ff5964;
+    height: 2rem;
+    width: 2rem;
+    line-height: 2rem;
+    border: .3rem solid #fff;
+    text-align: center;
+    font-weight: bold;
+    -moz-border-radius: 2rem;
+    -webkit-border-radius: 2rem;
+    border-radius: 2rem;
+    color:#FFF;
 }
