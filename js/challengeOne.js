@@ -142,11 +142,11 @@ function applyFilter(filter) {
                 document.querySelector('.filter-all').classList.add('filter-active');
                 break;
             case "filter-incomplete":
-                displayTasks(filterIncomplete());
+                displayTasks(filterIncomplete(taskList));
                 document.querySelector('.filter-incomplete').classList.add('filter-active');
                 break;
             case "filter-complete":
-                displayTasks(filterComplete());
+                displayTasks(filterComplete(taskList));
                 document.querySelector('.filter-complete').classList.add('filter-active');
                 break;
             default:
@@ -155,13 +155,7 @@ function applyFilter(filter) {
     });
 }
 
-function filterIncomplete(){
-    return taskList.filter(task => task.completed != true);
-}
 
-function filterComplete(){
-    return taskList.filter(task => task.completed == true);
-}
 
 function countRemaining(){
     let tasksRemaining = document.querySelector('.tasks-remaining')
