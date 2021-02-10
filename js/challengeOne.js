@@ -22,8 +22,8 @@ function startToDos(){
     // console.log(taskList);
     if(taskList){
         displayTasks(filterAll());
-    }    
-    countRemaining();
+        countRemaining();
+    }
 }
 
 function displayTasks(filteredList){
