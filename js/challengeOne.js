@@ -1,4 +1,4 @@
-import {loadTasks, saveTasks} from 'ls.js';
+import {loadTasks, saveTasks} from './ls.js';
 
 window.onload = startToDos;
 
