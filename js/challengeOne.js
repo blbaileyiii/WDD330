@@ -9,7 +9,7 @@ document.querySelector('.filter-incomplete').addEventListener("click", applyFilt
 document.querySelector('.filter-complete').addEventListener("click", applyFilter);
 
 const taskUl = document.querySelector('.tasks-list');
-let taskList = [];
+var taskList = [];
 
 class ToDo {
     constructor(id, content, completed) {
