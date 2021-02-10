@@ -20,12 +20,11 @@ class ToDo {
 function startToDos(){
     taskList = loadTasks("todo");
     // console.log(taskList);
-    displayTasks(filterAll());
-    //set filters...
+    if(taskList){
+        displayTasks(filterAll());
+    }    
     countRemaining();
 }
-
-
 
 function displayTasks(filteredList){
     taskUl.innerHTML = "";
