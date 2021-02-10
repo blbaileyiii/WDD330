@@ -1,39 +1,37 @@
 import {loadTasks, saveTasks} from './ls.js';
 
-let toDoList;
-
 export default class ToDos {
-    constructor(id, content, completed) {
-        this.id = id;
-        this.content = content;
-        this.completed = completed;
+
+    constructor() {
+        this.toDoList = null;
     }
-}
-
-function saveTodo(task, key) {
-
-}
-
-function getTodos(key){
-
-}
-
-function addTodo() {
-
-}
-
-function listTodos() {
     
-}
+    saveTodo(task, key) {
 
-function completeTodo() {
+    }
 
-}
+    getTodos(key){
 
-function removeTodo() {
+    }
 
-}
+    addTodo(src) {
+        this.toDoList[this.toDoList.length] = {id: Date.now(), content: src.value, completed: false};
+        console.log(this.toDoList);
+    }
 
-function filterTodos() {
+    listTodos() {
+        
+    }
 
+    completeTodo() {
+
+    }
+
+    removeTodo() {
+
+    }
+
+    filterTodos() {
+
+    }
 }
