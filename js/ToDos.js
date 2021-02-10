@@ -4,7 +4,7 @@ export default class ToDos {
 
     constructor() {
         this.toDoList = "Lee";
-        var that = this;
+        const that = this;
     }
     
     saveTodo(task, key) {
