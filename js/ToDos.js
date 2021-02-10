@@ -4,7 +4,6 @@ export default class ToDos {
 
     constructor() {
         this.toDoList = "Lee";
-        const that = this;
     }
     
     saveTodo(task, key) {
@@ -15,7 +14,7 @@ export default class ToDos {
 
     }
 
-    addTodo(src) {
+    addTodo(src, that) {
         console.log(that);
         //toDoList[toDoList.length] = {id: Date.now(), content: src.value, completed: false};
         console.log(that.toDoList);
