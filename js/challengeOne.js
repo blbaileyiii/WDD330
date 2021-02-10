@@ -2,6 +2,8 @@ import {loadTasks, saveTasks} from './ls.js';
 
 window.onload = startToDos;
 
+document.querySelector('.add-task').addEventListener("click", addTask);
+
 document.querySelector('.filter-all').addEventListener("click", applyFilter);
 document.querySelector('.filter-incomplete').addEventListener("click", applyFilter);
 document.querySelector('.filter-complete').addEventListener("click", applyFilter);
@@ -166,8 +168,4 @@ function filterComplete(){
 function countRemaining(){
     let tasksRemaining = document.querySelector('.tasks-remaining')
     tasksRemaining.textContent = filterIncomplete().length + ' tasks left';
-}
-
-export {
-    addTask
 }
