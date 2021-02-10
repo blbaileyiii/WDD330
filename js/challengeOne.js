@@ -1,3 +1,5 @@
+import {loadTasks, saveTasks} from './ls.js';
+
 window.onload = startToDos;
 
 document.querySelector('.filter-all').addEventListener("click", applyFilter);
