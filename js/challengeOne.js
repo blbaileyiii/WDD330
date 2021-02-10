@@ -60,8 +60,6 @@ function displayTasks(filteredList){
     });
 }
 
-
-
 function addTask(){
     console.log("Start Add Task");
     //console.log(taskList);
@@ -113,7 +111,6 @@ function completeTask(task){
         // console.log(taskList);
     }
     update();
-
 }
 
 function removeTask(task){
