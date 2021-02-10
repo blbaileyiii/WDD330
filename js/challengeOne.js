@@ -23,7 +23,7 @@ function startToDos(){
     taskList = loadTasks("todo");
     // console.log(taskList);
     if(taskList){
-        displayTasks(filterAll());
+        displayTasks(taskList);
         countRemaining();
     } else {
         taskList = [];
@@ -138,7 +138,7 @@ function applyFilter(filter) {
     filter.target.classList.forEach(aclass => {
         switch(aclass) {
             case "filter-all":
-                displayTasks(filterAll());
+                displayTasks(taskList);
                 document.querySelector('.filter-all').classList.add('filter-active');
                 break;
             case "filter-incomplete":
