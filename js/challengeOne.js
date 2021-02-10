@@ -155,8 +155,6 @@ function applyFilter(filter) {
     });
 }
 
-
-
 function countRemaining(){
     let tasksRemaining = document.querySelector('.tasks-remaining')
     tasksRemaining.textContent = filterIncomplete().length + ' tasks left';
