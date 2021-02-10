@@ -5,3 +5,8 @@ function filterIncomplete(list){
 function filterComplete(list){
     return list.filter(item => item.completed == true);
 }
+
+export {
+    filterIncomplete,
+    filterComplete
+}

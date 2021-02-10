@@ -1,4 +1,5 @@
 import {loadTasks, saveTasks} from './ls.js';
+import {filterIncomplete, filterComplete} from './utilities.js';
 
 window.onload = startToDos;
 
