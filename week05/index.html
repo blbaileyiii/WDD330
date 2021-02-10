@@ -7,7 +7,8 @@
     <title>WDD 330: Bernard Bailey</title>
     <meta name="description"
         content="Portfolio for BYUI WDD330 - Web /Frontend Development II">
-    <link rel="stylesheet" href="../css/styles.css">  
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/todo.css">
 </head>
 
 <body>
@@ -34,18 +35,25 @@
                 </li>
             </ol>
         </section>
-        <section class="notes">
-            <h4>Questions:</h4>
-            <ol>
-                <li><span>Javascript: Novice to Ninja - Chapter 10: Testing and Debugging</span>
-                    <ol>
-                        <li><span>No questions this week. I will need to take some time to review Jest...</span></li>
-                    </ol>
-                </li>
-            </ol>
-        </section>
-        <section class="notes">
-            <h4>Exercises:</h4>
+        <section>
+            <h4>Challenge One (Weeks: 5 & 6):</h4>
+            <div class="todo">
+                <h1 class="todo-header">Todos</h1>
+                <div class="tasks">
+                    <ul class="tasks-list"></ul>
+                    <div class="todo-footer">
+                        <span class="tasks-remaining">3 tasks left</span>
+                        <button class="filter-all filter-active">All</button>
+                        <button class="filter-incomplete">Active</button>
+                        <button class="filter-complete">Completed</button>
+                    </div>
+                </div>
+                
+                <div class="add-tasks">
+                    <input id="add-task-input" name="add-task-input" type="text" placeholder="Add your task here.">
+                    <button class="add-task" onclick="addTask();">+</button>                  
+                </div>
+            </div>
         </section>
     </main>
     <footer>
@@ -56,5 +64,6 @@
         </div>
     </footer>
     <script src="../js/js.js"></script>
+    <script type="module" src="../js/challengeOne.js"></script>
 </body>
 </html>

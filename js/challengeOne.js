@@ -1,3 +1,5 @@
+import {loadTasks, saveTasks} from 'ls/ls.js';
+
 window.onload = startToDos;
 
 document.querySelector('.filter-all').addEventListener("click", applyFilter);
@@ -16,16 +18,14 @@ class ToDo {
 }
 
 function startToDos(){
-    loadTasks();
+    taskList = loadTasks("todo");
+    // console.log(taskList);
+    displayTasks(filterAll());
     //set filters...
     countRemaining();
 }
 
-function loadTasks(){
-    taskList = JSON.parse(localStorage.getItem("todo"));
-    // console.log(taskList);
-    displayTasks(filterAll());
-}
+
 
 function displayTasks(filteredList){
     taskUl.innerHTML = "";
@@ -56,10 +56,7 @@ function displayTasks(filteredList){
     });
 }
 
-function saveTasks(){
-    localStorage.setItem("todo", JSON.stringify(taskList));
-    //console.log(localStorage.getItem("todo"));
-}
+
 
 function addTask(){
     //console.log("Start Add Task");
@@ -125,7 +122,7 @@ function removeTask(task){
 }
 
 function update() {
-    saveTasks();
+    saveTasks("todo", taskList);
     countRemaining();
 }
 
