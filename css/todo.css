@@ -1,0 +1,130 @@
+.todo {
+   width: 23rem;
+   margin: 0 auto;
+   padding: 1rem;
+   border-radius: 1rem;
+   box-shadow: 5px 5px 15px 5px #1e0aff69;
+}
+
+.todo input:focus, .todo button:focus {
+    outline: none;
+}
+
+.todo button:active {
+    transform: scale(0.85);
+}
+
+.tasks {
+    min-height: 25rem; 
+}
+
+.todo-header {
+    font-size: 2rem;
+    text-align: center;
+    margin: 1rem 0;
+    background-image: linear-gradient(to bottom right,#ff5964 35%, #ffe74c);
+    color: white;
+    padding: 0.5rem;
+}
+
+.tasks-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.add-tasks {
+    margin-top: 1rem;
+}
+
+.task, .add-tasks {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task input[type='checkbox'] {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.task input[type=checkbox]:checked + label {
+    text-decoration: line-through;
+}
+
+.task-desc {
+    flex-grow: 1;    
+    text-align: left;
+    font-size: 1.25rem;
+    padding: 0 0.5rem;    
+}
+
+.add-tasks input{
+    flex-grow: 1;    
+    text-align: left;
+    font-size: 1.25rem;
+    height: 2.25rem;
+    margin-right: 0.25rem;
+    padding: 0 0.65rem;
+}
+
+.todo-footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.1rem 0.5rem;    
+}
+
+.tasks-remaining {
+    font-size: 0.85rem;
+    flex-grow: 1;    
+    text-align: left;
+    color: #1f0aff;
+    font-weight: bold;
+}
+
+.add-tasks button, .add-tasks input, .todo-footer {
+    border: 2px solid #1f0aff;
+}
+
+.task {
+    border-top: 2px solid #1f0aff;
+    border-left: 2px solid #1f0aff;
+    border-right: 2px solid #1f0aff;
+}
+
+.task button {
+    background: #ff5964;
+    font-size: 1.75rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 2px inset #ff5964;
+    color: white;
+    margin: 0.25rem;
+}
+
+.todo-footer button {
+    background: white;
+    color: #1f0aff;
+    font-size: 1rem;
+    padding: 0.5rem;
+    border: none;
+}
+
+.todo-footer .filter-active, .todo-footer button:hover {
+    background-image: linear-gradient(to bottom right,#ff5964 35%, #ffe74c);
+    color: white;
+    font-size: 1rem;
+    padding: 0.5rem;
+    border: none;
+}
+
+.add-tasks button {
+    background: white;
+    color: #1f0aff;
+    font-size: 3rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    line-height: 1.85rem;
+    padding: 0.25rem;
+}
