@@ -60,7 +60,7 @@ function displayTasks(filteredList){
 
 
 function addTask(){
-    //console.log("Start Add Task");
+    console.log("Start Add Task");
     //console.log(taskList);
     let addTaskInput = document.getElementById('add-task-input');
     let id = 'task-' + taskList.length;
