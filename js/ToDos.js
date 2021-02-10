@@ -3,7 +3,7 @@ import {loadTasks, saveTasks} from './ls.js';
 export default class ToDos {
 
     constructor() {
-        this.toDoList = [];
+        this.toDoList = "Lee";
     }
     
     saveTodo(task, key) {
