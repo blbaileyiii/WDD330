@@ -155,10 +155,6 @@ function applyFilter(filter) {
     });
 }
 
-function filterAll(){
-    return taskList;
-}
-
 function filterIncomplete(){
     return taskList.filter(task => task.completed != true);
 }
