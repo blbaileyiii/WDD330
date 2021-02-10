@@ -1,5 +1,9 @@
 window.onload = startToDos;
 
+document.querySelector('.filter-all').addEventListener("click", applyFilter);
+document.querySelector('.filter-incomplete').addEventListener("click", applyFilter);
+document.querySelector('.filter-complete').addEventListener("click", applyFilter);
+
 const taskUl = document.querySelector('.tasks-list');
 let taskList = [];
 
@@ -19,9 +23,13 @@ function startToDos(){
 
 function loadTasks(){
     taskList = JSON.parse(localStorage.getItem("todo"));
-    console.log(taskList);
+    // console.log(taskList);
+    displayTasks(filterAll());
+}
 
-    taskList.forEach(task => {
+function displayTasks(filteredList){
+    taskUl.innerHTML = "";
+    filteredList.forEach(task => {
         //console.log(task.content);
         let li = document.createElement('li');
         let input = document.createElement('input');
@@ -56,7 +64,7 @@ function saveTasks(){
 function addTask(){
     //console.log("Start Add Task");
     //console.log(taskList);
-    let addTaskInput = document.getElementById('add-task');
+    let addTaskInput = document.getElementById('add-task-input');
     let id = 'task-' + taskList.length;
     //console.log(id);
     if(addTaskInput.value) {
@@ -92,17 +100,16 @@ function addTask(){
 
 function completeTask(task){
     let checkbox = task.target;
-    let chkid = checkbox.id.replace("task-", "");
-    let taskChk = taskList[chkid];
+    let taskChk = taskList.filter(atask => atask.id == task.target.id)[0];
 
     if (checkbox.checked) {
-        console.log("Checkbox is checked..");
         taskChk.completed = true;
-        console.log(taskList[chkid]);
+        // console.log(taskChk)
+        // console.log(taskList);
       } else {
-        console.log("Checkbox is not checked..");
         taskChk.completed = false;
-        console.log(taskList[chkid]);
+        // console.log(taskChk)
+        // console.log(taskList);
     }
     update();
 
@@ -122,19 +129,45 @@ function update() {
     countRemaining();
 }
 
+function applyFilter(filter) {
+    // UnSet the active filter...
+    if (document.querySelector('.filter-active')){
+        document.querySelector('.filter-active').classList.remove('filter-active');
+    }
+
+    filter.target.classList.forEach(aclass => {
+        switch(aclass) {
+            case "filter-all":
+                displayTasks(filterAll());
+                document.querySelector('.filter-all').classList.add('filter-active');
+                break;
+            case "filter-incomplete":
+                displayTasks(filterIncomplete());
+                document.querySelector('.filter-incomplete').classList.add('filter-active');
+                break;
+            case "filter-complete":
+                displayTasks(filterComplete());
+                document.querySelector('.filter-complete').classList.add('filter-active');
+                break;
+            default:
+                break;
+        }
+    });
+}
+
 function filterAll(){
-
+    return taskList;
 }
 
-function filterActive(){
-
+function filterIncomplete(){
+    return taskList.filter(task => task.completed != true);
 }
 
-function filterCompleted(){
-    
+function filterComplete(){
+    return taskList.filter(task => task.completed == true);
 }
 
 function countRemaining(){
     let tasksRemaining = document.querySelector('.tasks-remaining')
-    tasksRemaining.textContent = taskList.filter(task => task.completed != true).length + ' tasks left';
+    tasksRemaining.textContent = filterIncomplete().length + ' tasks left';
 }

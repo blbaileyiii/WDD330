@@ -46,15 +46,15 @@
                     <ul class="tasks-list"></ul>
                     <div class="todo-footer">
                         <span class="tasks-remaining">3 tasks left</span>
-                        <button class="filter-active">All</button>
-                        <button>Active</button>
-                        <button>Completed</button>
+                        <button class="filter-all filter-active">All</button>
+                        <button class="filter-incomplete">Active</button>
+                        <button class="filter-complete">Completed</button>
                     </div>
                 </div>
                 
                 <div class="add-tasks">
-                    <input id="add-task" name="add-task" type="text">
-                    <button onclick="addTask();">+</button>                  
+                    <input id="add-task-input" name="add-task-input" type="text" placeholder="Add your task here.">
+                    <button class="add-task" onclick="addTask();">+</button>                  
                 </div>
             </div>
         </section>
