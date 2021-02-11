@@ -1,9 +1,11 @@
 import {loadTasks, saveTasks} from './ls.js';
-import {filterIncomplete, 
+import {filterID,
+        filterIncomplete, 
         filterComplete, 
         getAddTaskInput, 
         getAddTaskBtn,
-        getTaskUL} from './utilities.js';
+        getTaskUL,
+        setCount} from './utilities.js';
 
 export default class ToDos {
 
@@ -17,6 +19,7 @@ export default class ToDos {
     saveTodos() {
         saveTasks("todo", toDoList);
         this.filterTodos();
+        setCount();
     }
 
     getTodos(){
@@ -40,14 +43,14 @@ export default class ToDos {
         li.classList.add('task');
         input.setAttribute('type', 'checkbox');
         input.setAttribute('id', task.id);
-        input.addEventListener("change", this.completeTodo);
+        input.addEventListener("change", this.completeTodo.bind(this));
         input.checked = task.completed;
 
         label.classList.add('task-desc');
         label.setAttribute('for', task.id);
         label.textContent = task.content;
         button.textContent = "X";
-        button.addEventListener("click", this.removeTodo);
+        button.addEventListener("click", this.removeTodo.bind(this));
 
         li.appendChild(input);
         li.appendChild(label);
@@ -68,12 +71,20 @@ export default class ToDos {
         console.log(this.toDoList);        
     }
 
-    completeTodo() {
+    completeTodo(chkBox) {
+        let task = filterID(this.toDoList, chkBox.id);
 
+        if (chkBox.target.checked) {
+            task.completed = true;
+        } else {
+            task.completed = false;
+        }
+
+        this.saveTodos();
     }
 
-    removeTodo() {
-
+    removeTodo(completeBtn) {
+        this.saveTodos();
     }
 
     applyFilter(filterBtn){
