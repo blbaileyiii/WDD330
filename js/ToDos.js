@@ -14,10 +14,11 @@ export default class ToDos {
 
     }
 
-    addTodo(that) {
-        console.log(that);
+    addTodo(value) {
+        console.log(this);
+        console.log(value);
         //toDoList[toDoList.length] = {id: Date.now(), content: src.value, completed: false};
-        console.log(that.toDoList);
+        console.log(this.toDoList);
     }
 
     listTodos() {

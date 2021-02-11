@@ -2,7 +2,7 @@ import ToDos from './ToDos.js';
 
 let todos = new ToDos();
 
-document.querySelector('.add-task').addEventListener("click", todos.addTodo.bind(this, todos));
+document.querySelector('.add-task').addEventListener("click", todos.addTodo.bind(todos, this.value));
 
 function renderToDoList(list, element) {
 
