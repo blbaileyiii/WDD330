@@ -74,11 +74,11 @@ export default class ToDos {
 
     }
 
-    applyFilter(filter){
+    applyFilter(filterParm){
         console.log(this);
         console.log(this.filter);
-        console(filter);
-        console(filter.value);
+        console(filterParm);
+        console(filterParm.value);
     }
 
     filterTodos() {
