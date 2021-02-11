@@ -1,5 +1,5 @@
 import {loadTasks, saveTasks} from './ls.js';
-import {filterIncomplete, filterComplete, getAddTaskDesc, resetAddTaskDesc} from './utilities.js';
+import {filterIncomplete, filterComplete, getAddTaskInput, getAddTaskBtn} from './utilities.js';
 
 export default class ToDos {
 
@@ -22,10 +22,10 @@ export default class ToDos {
 
     addTodo() {
         console.log(this.toDoList);
-        let taskDesc = getAddTask();
+        let input = getAddTaskInput();
         if(taskDesc){
-            this.toDoList[this.toDoList.length] = {id: Date.now(), content: taskDesc.value, completed: false};        
-            taskDesc.value = "";
+            this.toDoList[this.toDoList.length] = {id: Date.now(), content: input.value, completed: false};        
+            input.value = "";
         }
         console.log(this.toDoList);        
     }
@@ -43,7 +43,9 @@ export default class ToDos {
     }
 
     addBindings() {
-        document.querySelector('.add-task').addEventListener("click", todos.addTodo.bind(todos));
+        let addTaskBtn = getAddTaskBtn();
+
+        addTaskBtn.addEventListener("click", todos.addTodo.bind(todos));
         //document.querySelector('.filter-all').addEventListener("click", applyFilter);
         //document.querySelector('.filter-incomplete').addEventListener("click", applyFilter);
         //document.querySelector('.filter-complete').addEventListener("click", applyFilter);
