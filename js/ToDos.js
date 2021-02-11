@@ -45,7 +45,7 @@ export default class ToDos {
     addBindings() {
         let addTaskBtn = getAddTaskBtn();
 
-        addTaskBtn.addEventListener("click", todos.addTodo.bind(todos));
+        addTaskBtn.addEventListener("click", this.addTodo.bind(todos));
         //document.querySelector('.filter-all').addEventListener("click", applyFilter);
         //document.querySelector('.filter-incomplete').addEventListener("click", applyFilter);
         //document.querySelector('.filter-complete').addEventListener("click", applyFilter);
