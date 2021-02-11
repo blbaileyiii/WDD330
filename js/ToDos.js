@@ -130,12 +130,19 @@ export default class ToDos {
     }
 
     addBindings() {
+        let addTaskInput = getAddTaskInput();
         let addTaskBtn = getAddTaskBtn();
         let filterAllBtn = getFilterAllBtn();
         let filterIncompleteBtn = getFilterIncompleteBtn();
         let filterCompleteBtn = getFilterCompleteBtn();
+        
 
-
+        addTaskInput.addEventListener("keyup", function(event) {
+            if (event.key === "Enter") {
+                event.preventDefault();
+                addTaskBtn.click();
+            }
+        });
         addTaskBtn.addEventListener("click", this.addTodo.bind(this));        
         filterAllBtn.addEventListener("click", this.applyFilter.bind(this));
         filterIncompleteBtn.addEventListener("click", this.applyFilter.bind(this));
