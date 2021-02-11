@@ -14,8 +14,9 @@ export default class ToDos {
         this.filterTodos();
     }
     
-    saveTodo() {
+    saveTodos() {
         saveTasks("todo", toDoList);
+        this.filterTodos();
     }
 
     getTodos(){
@@ -60,7 +61,8 @@ export default class ToDos {
         console.log(this.toDoList);
         let input = getAddTaskInput();
         if(input.value){
-            this.toDoList[this.toDoList.length] = {id: Date.now(), content: input.value, completed: false};        
+            this.toDoList[this.toDoList.length] = {id: Date.now(), content: input.value, completed: false};
+            this.saveTodos();
             input.value = "";
         }
         console.log(this.toDoList);        
