@@ -1,4 +1,5 @@
 import {loadTasks, saveTasks} from './ls.js';
+import {filterIncomplete, filterComplete, getAddTaskDesc, resetAddTaskDesc} from './utilities.js';
 
 export default class ToDos {
 
@@ -14,10 +15,15 @@ export default class ToDos {
 
     }
 
-    addTodo(event) {
-        console.log(this);
-        console.log(event.target);
-        //toDoList[toDoList.length] = {id: Date.now(), content: src.value, completed: false};
+    addTodo() {
+        console.log(this.toDoList);
+        let taskDesc = getAddTaskDesc();
+        if(taskDesc){
+            this.toDoList[this.toDoList.length] = {id: Date.now(), content: taskDesc, completed: false};        
+            resetAddTaskDesc();
+        }
+        console.log(this.toDoList);
+        
     }
 
     listTodos() {
