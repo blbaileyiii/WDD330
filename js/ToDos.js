@@ -4,7 +4,7 @@ import {filterIncomplete, filterComplete, getAddTaskInput, getAddTaskBtn} from '
 export default class ToDos {
 
     constructor() {
-        this.toDoList = getTodos();
+        this.toDoList = this.getTodos();
     }
     
     saveTodo() {
