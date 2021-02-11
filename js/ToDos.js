@@ -90,10 +90,11 @@ export default class ToDos {
         // Go to parent LI from clicked button.
         // Retrieve first child (the associated Input checkbox).
         // Retrieve the id value from the Input.
-        let chkId = completeBtn.target.parentNode.firstChild.id;
+        let chkID = completeBtn.target.parentNode.firstChild.id;
         let taskNdx = getNdxByID(this.toDoList, chkID);
 
         console.log(chkId);
+
         this.toDoList.splice(taskNdx, 1);
         this.saveTodos();
     }
