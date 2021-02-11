@@ -59,7 +59,7 @@ export default class ToDos {
         taskUL.appendChild(li);
         });
 
-        setCount(list);
+        setCount(this.toDoList);
     }
 
     addTodo() {
