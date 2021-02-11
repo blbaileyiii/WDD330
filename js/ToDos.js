@@ -86,7 +86,7 @@ export default class ToDos {
 
     removeTodo(completeBtn) {
         let li = completeBtn.target.parentNode;
-        let chkId = task.target.parentNode.firstChild.id;
+        let chkId = li.firstChild.id;
         console.log(chkId);
         this.toDoList.splice(chkId, 1);
         this.saveTodos();
