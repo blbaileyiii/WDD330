@@ -73,7 +73,7 @@ export default class ToDos {
     }
 
     completeTodo(chkBox) {
-        let task = filterID(this.toDoList, chkBox.id);
+        let task = filterID(this.toDoList, chkBox.target.id);
 
         if (chkBox.target.checked) {
             task.completed = true;
