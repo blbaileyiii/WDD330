@@ -74,9 +74,11 @@ export default class ToDos {
 
     }
 
-    applyFilter(){
+    applyFilter(filter){
         console.log(this);
-        console.log(this.value);
+        console.log(this.filter);
+        console(filter);
+        console(filter.value);
     }
 
     filterTodos() {
@@ -100,8 +102,8 @@ export default class ToDos {
 
         addTaskBtn.addEventListener("click", this.addTodo.bind(this));
         
-        document.querySelector('.filter-all').addEventListener("click", this.applyFilter);
-        document.querySelector('.filter-incomplete').addEventListener("click", this.applyFilter);
-        document.querySelector('.filter-complete').addEventListener("click", this.applyFilter);
+        document.querySelector('.filter-all').addEventListener("click", this.applyFilter.bind(this));
+        document.querySelector('.filter-incomplete').addEventListener("click", this.applyFilter.bind(this));
+        document.querySelector('.filter-complete').addEventListener("click", this.applyFilter.bind(this));
     }
 }
