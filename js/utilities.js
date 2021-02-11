@@ -22,11 +22,17 @@ function getTaskUL(){
     return document.querySelector('.tasks-list');
 }
 
+function setCount(list){
+    let countSpan = document.querySelector('.tasks-remaining');
+    countSpan.textContent = filterIncomplete(list).length + ' tasks left';
+}
+
 export {
     filterID,
     filterIncomplete,
     filterComplete,
     getAddTaskInput,
     getAddTaskBtn,
-    getTaskUL
+    getTaskUL,
+    setCount
 }
