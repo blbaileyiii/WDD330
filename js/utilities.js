@@ -6,12 +6,12 @@ function filterComplete(list){
     return list.filter(item => item.completed == true);
 }
 
-function getAddTask(){
+function getAddTaskInput(){
     return document.getElementById('add-task-input');
 }
 
 export {
     filterIncomplete,
     filterComplete,
-    getAddTask
+    getAddTaskInput
 }
