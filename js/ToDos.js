@@ -10,6 +10,7 @@ export default class ToDos {
     constructor() {
         this.toDoList = this.getTodos();
         this.addBindings();
+        this.listTodos(this.toDoList);
     }
     
     saveTodo() {
@@ -24,10 +25,10 @@ export default class ToDos {
         return toDoList;
     }
 
-    listTodos() {     
+    listTodos(list) {     
         let taskUL = getTaskUL();
         taskUL.innerHTML = "";
-        this.toDoList.forEach(task => {
+        list.forEach(task => {
             //console.log(task.content);
         let li = document.createElement('li');
         let input = document.createElement('input');
