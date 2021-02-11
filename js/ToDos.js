@@ -14,8 +14,9 @@ export default class ToDos {
 
     }
 
-    addTodo() {
+    addTodo(arg) {
         console.log(this);
+        console.log(arg);
         //toDoList[toDoList.length] = {id: Date.now(), content: src.value, completed: false};
     }
 
