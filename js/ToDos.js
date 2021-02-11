@@ -5,6 +5,7 @@ export default class ToDos {
 
     constructor() {
         this.toDoList = [];
+        this.addBindings();
     }
     
     saveTodo(task, key) {
@@ -15,19 +16,18 @@ export default class ToDos {
 
     }
 
-    addTodo() {
-        console.log(this.toDoList);
-        let taskDesc = getAddTaskDesc();
-        if(taskDesc){
-            this.toDoList[this.toDoList.length] = {id: Date.now(), content: taskDesc, completed: false};        
-            resetAddTaskDesc();
-        }
-        console.log(this.toDoList);
+    listTodos() {
         
     }
 
-    listTodos() {
-        
+    addTodo() {
+        console.log(this.toDoList);
+        let taskDesc = getAddTask();
+        if(taskDesc){
+            this.toDoList[this.toDoList.length] = {id: Date.now(), content: taskDesc.value, completed: false};        
+            taskDesc.value = "";
+        }
+        console.log(this.toDoList);        
     }
 
     completeTodo() {
@@ -40,5 +40,12 @@ export default class ToDos {
 
     filterTodos() {
 
+    }
+
+    addBindings() {
+        document.querySelector('.add-task').addEventListener("click", todos.addTodo.bind(todos));
+        //document.querySelector('.filter-all').addEventListener("click", applyFilter);
+        //document.querySelector('.filter-incomplete').addEventListener("click", applyFilter);
+        //document.querySelector('.filter-complete').addEventListener("click", applyFilter);
     }
 }
