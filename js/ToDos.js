@@ -23,7 +23,7 @@ export default class ToDos {
     addTodo() {
         console.log(this.toDoList);
         let input = getAddTaskInput();
-        if(taskDesc){
+        if(input.value){
             this.toDoList[this.toDoList.length] = {id: Date.now(), content: input.value, completed: false};        
             input.value = "";
         }
