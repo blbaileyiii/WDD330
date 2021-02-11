@@ -10,8 +10,13 @@ function getAddTaskInput(){
     return document.getElementById('add-task-input');
 }
 
+function getAddTaskBtn(){
+    return document.querySelector('.add-task')
+}
+
 export {
     filterIncomplete,
     filterComplete,
-    getAddTaskInput
+    getAddTaskInput,
+    getAddTaskBtn
 }
