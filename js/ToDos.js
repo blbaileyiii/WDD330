@@ -18,8 +18,7 @@ export default class ToDos {
     
     saveTodos() {
         saveTasks("todo", toDoList);
-        this.filterTodos();
-        setCount();
+        this.filterTodos();        
     }
 
     getTodos(){
@@ -58,6 +57,8 @@ export default class ToDos {
 
         taskUL.appendChild(li);
         });
+
+        setCount();
     }
 
     addTodo() {
