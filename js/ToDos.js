@@ -11,7 +11,7 @@ export default class ToDos {
         this.toDoList = this.getTodos();
         this.addBindings();
         this.filter = 'all';
-        this.listTodos(this.toDoList);
+        this.filterTodos();
     }
     
     saveTodo() {
