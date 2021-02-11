@@ -10,8 +10,8 @@ export default class ToDos {
     constructor() {
         this.toDoList = this.getTodos();
         this.addBindings();
-        this.filter = 'filter-all';
-
+        this.filter = 'all';
+        this.listTodos(this.toDoList);
     }
     
     saveTodo() {
@@ -74,16 +74,33 @@ export default class ToDos {
 
     }
 
+    applyFilter(){
+        console.log(this.target.value);
+    }
+
     filterTodos() {
-        
+        switch(this.filter) {
+            case "all":
+                this.listTodos(this.toDoList);
+                break;
+            case "incomplete":
+                this.listTodos(filterIncomplete(this.toDoList));
+                break;
+            case "complete":
+                this.listTodos(filterComplete(this.toDoList));
+                break;
+            default:
+                break;
+        }   
     }
 
     addBindings() {
         let addTaskBtn = getAddTaskBtn();
 
         addTaskBtn.addEventListener("click", this.addTodo.bind(this));
-        //document.querySelector('.filter-all').addEventListener("click", applyFilter);
-        //document.querySelector('.filter-incomplete').addEventListener("click", applyFilter);
-        //document.querySelector('.filter-complete').addEventListener("click", applyFilter);
+        
+        document.querySelector('.filter-all').addEventListener("click", this.applyFilter);
+        document.querySelector('.filter-incomplete').addEventListener("click", this.applyFilter);
+        document.querySelector('.filter-complete').addEventListener("click", this.applyFilter);
     }
 }
