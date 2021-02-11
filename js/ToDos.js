@@ -10,7 +10,8 @@ export default class ToDos {
     constructor() {
         this.toDoList = this.getTodos();
         this.addBindings();
-        this.listTodos(this.toDoList);
+        this.filter = 'filter-all';
+
     }
     
     saveTodo() {
@@ -74,7 +75,7 @@ export default class ToDos {
     }
 
     filterTodos() {
-
+        
     }
 
     addBindings() {
