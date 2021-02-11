@@ -75,6 +75,7 @@ export default class ToDos {
     }
 
     applyFilter(){
+        console.log(this);
         console.log(this.target.value);
     }
 
