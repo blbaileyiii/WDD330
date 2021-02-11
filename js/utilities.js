@@ -19,7 +19,19 @@ function getAddTaskInput(){
 }
 
 function getAddTaskBtn(){
-    return document.querySelector('.add-task')
+    return document.querySelector('.add-task');
+}
+
+function getFilterAllBtn(){
+    return document.querySelector('.filter-all');
+}
+
+function getFilterIncompleteBtn(){
+    return document.querySelector('.filter-incomplete');
+}
+
+function getFilterCompleteBtn(){
+    return document.querySelector('.filter-complete');
 }
 
 function getTaskUL(){

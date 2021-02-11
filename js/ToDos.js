@@ -128,11 +128,14 @@ export default class ToDos {
 
     addBindings() {
         let addTaskBtn = getAddTaskBtn();
+        let filterAllBtn = getFilterAllBtn();
+        let filterIncompleteBtn = getFilterIncompleteBtn();
+        let filterCompleteBtn = getFilterCompleteBtn();
 
-        addTaskBtn.addEventListener("click", this.addTodo.bind(this));
-        
-        document.querySelector('.filter-all').addEventListener("click", this.applyFilter.bind(this));
-        document.querySelector('.filter-incomplete').addEventListener("click", this.applyFilter.bind(this));
-        document.querySelector('.filter-complete').addEventListener("click", this.applyFilter.bind(this));
+
+        addTaskBtn.addEventListener("click", this.addTodo.bind(this));        
+        filterAllBtn.addEventListener("click", this.applyFilter.bind(this));
+        filterIncompleteBtn.addEventListener("click", this.applyFilter.bind(this));
+        filterCompleteBtn.addEventListener("click", this.applyFilter.bind(this));
     }
 }
