@@ -50,6 +50,9 @@ export {
     filterComplete,
     getAddTaskInput,
     getAddTaskBtn,
+    getFilterAllBtn,
+    getFilterIncompleteBtn,
+    getFilterCompleteBtn,
     getTaskUL,
     setCount
 }
