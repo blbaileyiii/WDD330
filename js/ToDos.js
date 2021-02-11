@@ -5,7 +5,6 @@ export default class ToDos {
 
     constructor() {
         this.toDoList = [];
-        this.addBindings();
     }
     
     saveTodo(task, key) {
