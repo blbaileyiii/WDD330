@@ -26,7 +26,7 @@ export default class ToDos {
 
     listTodos() {     
         let taskUL = getTaskUL();
-        taskUl.innerHTML = "";
+        taskUL.innerHTML = "";
         this.toDoList.forEach(task => {
             //console.log(task.content);
         let li = document.createElement('li');
