@@ -1,7 +1,9 @@
 function filterID(list, chkBoxID){
-    console.log(list);
-    console.log(chkBoxID);
     return list.filter(task => task.id == chkBoxID)[0];
+}
+
+function getNdxByID(list, chkBoxID){
+    return list.findIndex(task => task.id == chkBoxID);
 }
 
 function filterIncomplete(list){
@@ -31,6 +33,7 @@ function setCount(list){
 
 export {
     filterID,
+    getNdxByID,
     filterIncomplete,
     filterComplete,
     getAddTaskInput,
