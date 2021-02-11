@@ -4,19 +4,22 @@ import {filterIncomplete, filterComplete, getAddTaskInput, getAddTaskBtn} from '
 export default class ToDos {
 
     constructor() {
-        this.toDoList = [];
+        this.toDoList = getTodos();
     }
     
-    saveTodo(task, key) {
-
+    saveTodo() {
+        saveTasks("todo", toDoList);
     }
 
-    getTodos(key){
-
+    getTodos(){
+        let toDoList = loadTasks("todo");
+        if(!toDoList){
+            toDoList = [];
+        }
+        return toDoList;
     }
 
-    listTodos() {
-        
+    listTodos() {        
     }
 
     addTodo() {
