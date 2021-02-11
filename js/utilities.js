@@ -14,9 +14,14 @@ function getAddTaskBtn(){
     return document.querySelector('.add-task')
 }
 
+function getTaskUL(){
+    return document.querySelector('.tasks-list');
+}
+
 export {
     filterIncomplete,
     filterComplete,
     getAddTaskInput,
-    getAddTaskBtn
+    getAddTaskBtn,
+    getTaskUL
 }
