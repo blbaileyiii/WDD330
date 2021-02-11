@@ -74,8 +74,14 @@ export default class ToDos {
 
     }
 
-    applyFilter(filterParm){
-        this.filter = filterParm.target.value;
+    applyFilter(filterBtn){
+        if (document.querySelector('.filter-active')){
+            document.querySelector('.filter-active').classList.remove('filter-active');
+        }
+        filterBtn.target.classList.add('filter-active');
+
+        this.filter = filterBtn.target.value;
+
         this.filterTodos();
     }
 
