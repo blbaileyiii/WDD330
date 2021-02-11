@@ -66,14 +66,14 @@ export default class ToDos {
     }
 
     addTodo() {
-        console.log(this.toDoList);
+        //console.log(this.toDoList);
         let input = getAddTaskInput();
         if(input.value){
             this.toDoList[this.toDoList.length] = {id: Date.now(), content: input.value, completed: false};
             this.saveTodos();
             input.value = "";
         }
-        console.log(this.toDoList);        
+        //console.log(this.toDoList);        
     }
 
     completeTodo(chkBox) {
@@ -96,7 +96,7 @@ export default class ToDos {
         let chkID = completeBtn.target.parentNode.firstChild.id;
         let taskNdx = getNdxByID(this.toDoList, chkID);
 
-        console.log(chkID);
+        //console.log(chkID);
 
         this.toDoList.splice(taskNdx, 1);
         this.saveTodos();
