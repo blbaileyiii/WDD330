@@ -93,7 +93,7 @@ export default class ToDos {
         let chkID = completeBtn.target.parentNode.firstChild.id;
         let taskNdx = getNdxByID(this.toDoList, chkID);
 
-        console.log(chkId);
+        console.log(chkID);
 
         this.toDoList.splice(taskNdx, 1);
         this.saveTodos();
