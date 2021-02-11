@@ -17,7 +17,7 @@ export default class ToDos {
     }
     
     saveTodos() {
-        saveTasks("todo", toDoList);
+        saveTasks("todo", this.toDoList);
         this.filterTodos();        
     }
 
