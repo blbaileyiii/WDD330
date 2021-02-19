@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WDD 330: Bernard Bailey</title>
+    <meta name="description"
+        content="Portfolio for BYUI WDD330 - Web /Frontend Development II">
+    <link rel="stylesheet" href="../css/styles.css">  
+</head>
+
+<body>
+    <header>
+       <h1>WDD 330 Portfolio</h1>
+       <h2>Web Frontend Development II</h2>                  
+    </header>
+    <main>
+        <h3>Week 07</h3>
+        <section class="notes">
+            <h4>Notes:</h4>
+            <ol>
+                <li><span>Javascript: Novice to Ninja - Chapter 11: Further Functions</span>
+                    <ol>
+                        <li><span>function sayHello(); calls an unspecified obj "this". You can control what "this" refers to by sayHello.call(someotherobj) additional parms are comma'ed after the 'someotherobj' and passed to the function.</span></li>
+                        <li><span>.apply() works the same way but additional parms must be in an array.</span></li>
+                        <li><span>.cache[x] attached to and within a function call results in placing the value in a cache array attached to the function. This way you can retrieve past values. It is a key value pair assignment.</span></li>
+                        <li><span>A function can redefine itself. sayHello(){ sayHello = function (){ something else...;}}</span></li>
+                        <li><span>Redefining a function idea for me... It can be used to run a specific way the first time... and then change for the second iteration...</span></li>
+                        <li><span>WARNING: redefining a function drops prior assignments to properties... it starts "clean"...</span></li>
+                        <li><span><a href="https://www.youtube.com/watch?v=8aGhZQkoFbQ&ab_channel=JSConf">Event Loop</a></span></li>
+                    </ol>
+                </li>
+                <li><span>Javascript: Novice to Ninja - Chapter 13: Ajax</span>
+                    <ol>
+                        <li><span>Response Interface
+<pre>
+const url = 'https:example.com/data';
+fetch(url)
+.then((response) => {
+    if(response.ok) {
+        return response;
+    }
+    throw Error(response.statusText);
+})
+.then( response => // do something with response )
+.catch( error => console.log('There was an error!') )
+</pre>
+                        </span></li>
+                    </ol>
+                </li>
+            </ol>
+        </section>
+        <section class="notes">
+            <h4>Questions:</h4>
+            <ol>
+                <li><span>Javascript: Novice to Ninja - Chapter 11: Further Functions</span>
+                    <ol>
+                        <li><span>When would using IIFE and Temp variables be useful? I caught that the idea if you need to do something once and don't need to hold onto the variable at that scope level for the duration, but I didn't see a practical use for that per se. Probably because I didn't fully comprehend the timing and or use of an IIFE. Answer: next section called Initialization Code.</span></li>
+                    </ol>
+                </li>
+            </ol>
+        </section>
+        <section class="notes">
+            <h4>Exercises:</h4>
+        </section>
+    </main>
+    <footer>
+        <div>
+            <p>&copy; <span id="currYear"></span> | Bernard L. Bailey III | California | <a href="https://www.byui.edu/online" target="_blank" rel="noreferrer">BYUI Online Learning</a>
+               <br><span id="lastUpdated" class="lastUpdated"></span>
+            </p>
+        </div>
+    </footer>
+    <script src="../js/js.js"></script>
+</body>
+</html>
