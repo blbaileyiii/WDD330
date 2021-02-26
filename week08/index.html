@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WDD 330: Bernard Bailey</title>
+    <meta name="description"
+        content="Portfolio for BYUI WDD330 - Web /Frontend Development II">
+    <link rel="stylesheet" href="../css/styles.css">  
+</head>
+
+<body>
+    <header>
+       <h1>WDD 330 Portfolio</h1>
+       <h2>Web Frontend Development II</h2>                  
+    </header>
+    <main>
+        <h3>Week 08</h3>
+        <section class="notes">
+            <h4>Notes:</h4>
+            <ol>
+                <li><span>HTML5 & CSS3 for the Real World - Chapter 8: CSS3 Transforms and Transitions</span>
+                    <ol>
+                        <li><span>The order of transform functions makes a difference. Ex: if you rotate before translating, your translate direction will be on the rotated axis.</span></li>
+                        <li><span>Transistion: Any property changing from one value to another for which you can find a valid midpoint can be transitioned.</span></li>
+                        <li><span>Visibility can also "transition" though it is more like an on/off switch. Probably better to set it to visible and adjust using opacity.</span></li>
+                        <li><span>Negative delays are weird...just keep that in mind. You can end up jumping % through a transition</span></li>
+                    </ol>
+                </li>
+                <li><span>HTML5 & CSS3 for the Real World - Chapter 12: Canvas, SVG, and Drag and Drop</span>
+                    <ol>
+                        <li><span>Canvas: WARNING: You've got to specify width and height using HTML first. That determines the canvas size. If not then it defaults to 300x150 because CSS is applied AFTER loading in the element.</span></li>
+                        <li><span>Canvas is very similar to SVG, except it is created using JS. You declare the HTML element, then grab it from the DOM and then build it with JS.</span></li>
+                        <li><span>There is a lot to cover on Canvas. Revisit this chapter.</span></li>
+                        <li><span><a href="http://raphaeljs.com/" title="Raphaël">Raphaël</a> helps with SVG creation.</span></li>
+                        <li><span>Set the draggable attribute on any HTML elements you’d like to be draggable.</span></li>
+                        <li><span>Add an event listener for the dragstart event on any draggable HTML elements.</span></li>
+                        <li><span>Add an event listener for the dragover and drop events on any elements that you want to have accept dropped items.</span></li>
+                        <li><span>Note that draggable isnota Boolean attribute, so you have to explicitly set it to true.</span></li>
+                    </ol>
+                </li>
+            </ol>
+        </section>
+        <section class="notes">
+            <h4>Questions:</h4>
+            <ol>
+                <li><span>No Questions.</span></li>
+            </ol>
+        </section>
+        <section class="notes">
+            <h4>Exercises:</h4>
+        </section>
+    </main>
+    <footer>
+        <div>
+            <p>&copy; <span id="currYear"></span> | Bernard L. Bailey III | California | <a href="https://www.byui.edu/online" target="_blank" rel="noreferrer">BYUI Online Learning</a>
+               <br><span id="lastUpdated" class="lastUpdated"></span>
+            </p>
+        </div>
+    </footer>
+    <script src="../js/js.js"></script>
+</body>
+</html>
