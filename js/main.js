@@ -7,7 +7,7 @@ const links = [
     {label: "Notes", url: "week06/"},
     {label: "Notes", url: "week07/"},
     {label: "Notes", url: "week08/"},
-    //{label: "Notes", url: "week09/"},
+    {label: "Notes", url: "week09/"},
     //{label: "Notes", url: "week10/"},
     //{label: "Notes", url: "week11/"},
     //{label: "Notes", url: "week12/"},
