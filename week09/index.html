@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WDD 330: Bernard Bailey</title>
+    <meta name="description"
+        content="Portfolio for BYUI WDD330 - Web /Frontend Development II">
+    <link rel="stylesheet" href="../css/styles.css">  
+</head>
+
+<body>
+    <header>
+       <h1>WDD 330 Portfolio</h1>
+       <h2>Web Frontend Development II</h2>                  
+    </header>
+    <main>
+        <h3>Week 09</h3>
+        <section class="notes">
+            <h4>Notes:</h4>
+            <ol>
+                <li><span>Javascript: Novice to Ninja - Chapter 09: The Window Object</span>
+                    <ol>
+                        <li><span>Global variables are actually properties of the window obj. i.e. x=6 is the same as window.x=6</span></li>
+                        <li><span>Pay close attention to window.location there are a number of useful properties there. host, hostname, pathname, etc.</span></li>
+                        <li><span>Several important ones: search, hash, hostname</span></li>
+                        <li><span>
+<pre>window.history.go(1); // goes forward 1 page
+window.history.go(0); // reloads the current page
+window.history.go(-1); // goes back 1 page</pre>
+                        </span></li>
+                        <li><span>Don't use pop-ups. Even though the methods exist in javascript they are often disabled, or the user is given an option to disable them. Find another more elegant way of doing the task. AJAX for example.</span></li>
+                        <li><span>DOM exists within the window.</span></li>
+                        <li><span>Animation is possible with Javascript but really CSS can do it to and it would probably be a better place for it.</span></li>
+                    </ol>
+                </li>
+                <li><span>Javascript: Novice to Ninja - Chapter 14: HTML5 APIs</span>
+                    <ol>
+                        <li><span>Using data- attributes:
+<pre>&lt;div id='hero' data-powers='flight superSpeed'&gt;
+    Superman
+&lt;/div&gt;</pre>                    
+<pre>const superman = document.getElementById('hero');
+const powers = superman.dataset.powers;
+<< 'flight superSpeed'</pre>
+                        </span></li>
+                        <li><span>Video and Audio tags have the same general controls.</span></li>
+                        <li><span>Place text inbetween the audio/video tags to leave a message if the tag isn't supported.</span></li>
+                        <li><span>Look into the canvas element as a wet sig possibility.</span></li>
+                    </ol>
+                </li>
+            </ol>
+        </section>
+        <section class="notes">
+            <h4>Questions:</h4>
+            <ol>
+                <li><span>Javascript: Novice to Ninja - Chapter 09: The Window Object</span>
+                    <ol>
+                        <li><span>If dialog boxes stop code (and obviously they do), do they also stop asynchronous code? It seems that they wouldn't. But what happens when the call back occurs?</span></li>
+                    </ol>
+                </li>
+            </ol>
+        </section>
+        <section class="notes">
+            <h4>Exercises:</h4>
+        </section>
+    </main>
+    <footer>
+        <div>
+            <p>&copy; <span id="currYear"></span> | Bernard L. Bailey III | California | <a href="https://www.byui.edu/online" target="_blank" rel="noreferrer">BYUI Online Learning</a>
+               <br><span id="lastUpdated" class="lastUpdated"></span>
+            </p>
+        </div>
+    </footer>
+    <script src="../js/js.js"></script>
+</body>
+</html>
