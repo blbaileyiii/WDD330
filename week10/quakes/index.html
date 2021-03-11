@@ -9,6 +9,8 @@
     <body>
         <main>
             <h1>Quake List</h1>
+            <label for="radius">Radius in KM: </label>
+            <input id="radius" type="range" name="radius" min="10" max="100" step="1" onchange="rangevalue.value=value" value="100"></input> <output id="rangevalue">100</output>
             <ul id="quakeList" ></ul>
         </main>
         <script src="./index.js" type="module"></script>

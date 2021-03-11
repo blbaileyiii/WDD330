@@ -16,28 +16,69 @@
        <h2>Web Frontend Development II</h2>                  
     </header>
     <main>
-        <h3>Week 00</h3>
-        <section>
+        <h3>Week 10</h3>
+        <section class="notes">
             <h4>Notes:</h4>
             <ol>
-                <li>Topic
+                <li><span>MDN: Validating forms</span>
                     <ol>
-                        <li>Insight</li>
+                        <li><span>Warning: Never trust data passed to your server from the client. Even if your form is validating correctly and preventing malformed input on the client-side, a malicious user can still alter the network request.</span></li>
+                        <li><span>There are two basic form validation styles: A) Built in Form Validation, and B) Javascript</span></li>
+                        <li><span>Form Validation that is built in (this is when you set up the Form elements like an input being required or of type email.)</span></li>
+                        <li><span>Javascript (again, two types, intercepting the form submission and/or setting up various input events (ondirty, onchange, etc.))</span></li>
+                        <li><span>CSS elements :valid/:invalid will work with native form validation. Javascript can also be used to trigger the valid and invalid state of an input triggering the css as well. It just takes extra steps.</span></li>
+                        <li><span>The developer should take care to inform the user what the constraints are. That provides a better user experience. Example: Input A) has a max length of 8. Good: Tell the user that the entry can't be more than 8 characters. Best: Tell the user how many characters they have left...</span></li>
+                        <li><span>NOTE: There is a built in API supported on most browsers for Javascript validation. Using this will produce the same general results as using the built in form validation. However if you want to have your own notifications and styling etc, then you can just build custom.</span></li>
+                        <li><span>NOTE/WARNING: setCustomeValidity is not JUST setting the message IF that happens. It isn't even like an alert that only happens IF it happens. Instead AS long as the message is set the field is treated as invalid. You must setCustomValidity back to "" in an else/default/etc path for cases when the input is valid.</span></li>
+                    </ol>
+                </li>
+                <li><span>MDN: Using Fetch</span>
+                    <ol>
+                        <li><span>Retreive Data and put it in a json format
+<pre>fetch('http://example.com/movies.json')
+.then(response => response.json())
+.then(data => console.log(data));</pre>
+                        </span></li>
+                        <li><span>Fetch requests are controlled by the connect-src directive of Content Security Policy rather than the directive of the resources it's retrieving.</span></li>
+                        <li><span>Upload JSON data...
+<pre>const data = { username: 'example' };
+
+fetch('https://example.com/profile', {
+    method: 'POST', // or 'PUT'
+    headers: {
+    'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data),
+})
+.then(response => response.json())
+.then(data => {
+    console.log('Success:', data);
+})
+.catch((error) => {
+    console.error('Error:', error);
+});</pre>                            
+                        </span></li>
+                        <li><span>More Info: <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch" title="MDM: Using Fetch">MDM: Using Fetch</a></span></li>
                     </ol>
                 </li>
             </ol>
         </section>
-        <section>
+        <section class="notes">
             <h4>Questions:</h4>
             <ol>
-                <li>Topic
+                <li><span>MDN: Validating forms</span>
                     <ol>
-                        <li>Question</li>
+                        <li><span>Is there a preferred method of data validation? Especialy when all of it can seemingly be bypassed and manipulated maliciously?</span></li>
+                    </ol>
+                </li>
+                <li><span>MDN: Using Fetch</span>
+                    <ol>
+                        <li><span>How do you fulfil a promise?</span></li>
                     </ol>
                 </li>
             </ol>
         </section>
-        <section>
+        <section class="notes">
             <h4>Exercises:</h4>
         </section>
     </main>
